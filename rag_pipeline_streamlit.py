@@ -12,7 +12,6 @@ from time import time
 import asyncio
 import nest_asyncio
 
-# Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -23,7 +22,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger("RAG_Pipeline")
 
-# Применяем nest_asyncio
 try:
     nest_asyncio.apply()
     logger.info("nest_asyncio applied successfully")
@@ -108,7 +106,6 @@ def main():
         st.header("Upload PDFs")
         uploaded_files = st.file_uploader("Choose PDF files", type="pdf", accept_multiple_files=True)
 
-        # Track changes in uploads
         if uploaded_files and uploaded_files != st.session_state.uploaded_files:
             st.session_state.uploaded_files = uploaded_files
             st.session_state.processing_complete = False
