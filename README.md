@@ -1,4 +1,4 @@
-# 📄 PDF RAG Pipeline with Streamlit
+# PDF RAG Pipeline with Streamlit
 
 This project is a **Retrieval-Augmented Generation (RAG)** pipeline that allows users to upload complex PDF documents and interactively ask questions about their content via a user-friendly **Streamlit** interface.
 
@@ -19,7 +19,7 @@ The app processes PDFs using OCR when needed, extracts structured data (includin
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - `LlamaIndex`
 - `ChromaDB`
@@ -31,7 +31,7 @@ The app processes PDFs using OCR when needed, extracts structured data (includin
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ```bash
 # 1. Clone the repo
