@@ -49,7 +49,7 @@ def handle_multiple_pdfs(uploaded_files, openai_api_key, language="french"):
     logger.info(f"Processing {len(uploaded_files)} file(s)")
 
     all_docs = []
-    pdf_processor = PDFProcessor(ocr_lang=language[:3])  # e.g. 'fre'
+    pdf_processor = PDFProcessor(ocr_lang=language[:3])  
 
     with tempfile.TemporaryDirectory() as temp_dir:
         for file in uploaded_files:
@@ -97,7 +97,7 @@ def main():
     st.title("PDF RAG Pipeline")
     st.write("Upload your PDFs and ask questions about their content.")
 
-    # Sidebar: Config and Upload
+    # Sidebar
     with st.sidebar:
         st.header("Settings")
         openai_api_key = st.text_input("OpenAI API Key", type="password")
@@ -124,7 +124,7 @@ def main():
                     logger.exception("Processing error")
                     st.error(f"Something went wrong: {e}")
 
-    # Main panel: Results and Query
+    # Results and query
     if st.session_state.processing_complete:
         st.subheader("Documents Overview")
         st.write(f"Processed {len(st.session_state.documents)} documents.")
