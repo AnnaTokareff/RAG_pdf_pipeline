@@ -22,3 +22,4 @@ llama-index-vector-stores-chroma>=0.1.4
 llama-index-retrievers-bm25>=0.1.1
 llama-index-postprocessor-flag-embedding-reranker>=0.1.1
 camelot-py[cv]>=0.11.0
+git+https://github.com/FlagOpen/FlagEmbedding.git
